@@ -604,7 +604,7 @@
       for(let id in cart) { const item=menuItems.find(i=>i.id==id); if(item) msg += `• ${item.name} ×${cart[id]} = ₹${item.price*cart[id]}\n`; }
       const total = Object.entries(cart).reduce((s,[id,q])=>{ const it=menuItems.find(i=>i.id==id); return s+(it?it.price*q:0); },0);
       msg += `\n💰 Total: ₹${total}`;
-      window.open(`https://wa.me/919284969878?text=${encodeURIComponent(msg)}`, '_blank');
+      window.open(`https://wa.me/919075171000?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
     document.getElementById('categoryBar').addEventListener('click', e => {
@@ -617,7 +617,7 @@
     document.getElementById('cartFloatBtn').addEventListener('click', ()=>{ document.getElementById('cartPanel').classList.add('open'); renderCart(); });
     document.getElementById('closeCartBtn').addEventListener('click', ()=> document.getElementById('cartPanel').classList.remove('open'));
     document.getElementById('placeOrderBtn').addEventListener('click', placeOrder);
-    document.getElementById('whatsappFloat').addEventListener('click', ()=> window.open('https://wa.me/919284969878', '_blank'));
+    document.getElementById('whatsappFloat').addEventListener('click', ()=> window.open('https://wa.me/919075171000', '_blank'));
 
     renderCategories();
     renderMenu();
